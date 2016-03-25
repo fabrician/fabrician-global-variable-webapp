@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_fabrician_webapp_globalvar_domain_ComponentVariable" items="${componentvariables}" z="user-managed">
+        <table:table data="${componentvariables}" id="l_org_fabrician_webapp_globalvar_domain_ComponentVariable" path="/componentvariables" z="user-managed">
+            <table:column id="c_org_fabrician_webapp_globalvar_domain_ComponentVariable_gvName" property="gvName" z="user-managed"/>
+            <table:column id="c_org_fabrician_webapp_globalvar_domain_ComponentVariable_gvValue" property="gvValue" z="user-managed"/>
+            <table:column id="c_org_fabrician_webapp_globalvar_domain_ComponentVariable_project" property="project" z="user-managed"/>
+            <table:column id="c_org_fabrician_webapp_globalvar_domain_ComponentVariable_environment" property="environment" z="user-managed"/>
+            <table:column id="c_org_fabrician_webapp_globalvar_domain_ComponentVariable_location" property="location" z="user-managed"/>
+            <table:column id="c_org_fabrician_webapp_globalvar_domain_ComponentVariable_logicalMachine" property="logicalMachine" z="user-managed"/>
+        </table:table>
+    </page:list>
+</div>

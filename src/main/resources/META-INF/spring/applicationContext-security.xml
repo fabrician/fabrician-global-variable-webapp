@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+    <!-- HTTP security configurations -->
+    <http auto-config="true" use-expressions="true">
+        <form-login login-processing-url="/resources/j_spring_security_check" login-page="/login" authentication-failure-url="/login?login_error=t" />
+        <logout logout-url="/resources/j_spring_security_logout" />
+        <!-- Configure these elements to secure URIs in your application -->
+        <intercept-url pattern="/choices/**" access="isAuthenticated()" />
+        <intercept-url pattern="/member/**" access="isAuthenticated()" />
+        <intercept-url pattern="/archivevariables/**" access="isAuthenticated()" />
+        <intercept-url pattern="/componentvariables/**" access="isAuthenticated()" />
+        <intercept-url pattern="/resources/**" access="permitAll" />
+        <intercept-url pattern="/login/**" access="permitAll" />
+        <intercept-url pattern="/**" access="isAuthenticated()" />
+    </http>
+
+   <ldap-server id="ldapServer"
+        url="ldap://localhost:389"
+        manager-dn="cn=admin,dc=test,dc=com"
+        manager-password="admin"
+    />
+
+    <!-- Configure Authentication mechanism -->
+    <authentication-manager alias="authenticationManager">
+	<ldap-authentication-provider server-ref="ldapServer"  
+		user-dn-pattern="cn={0},ou=people,dc=test,dc=com"
+            	user-search-base="ou=people,dc=test,dc=com"
+            	user-search-filter="(cn={0})"
+       		group-role-attribute="cn"
+       		group-search-base="ou=sfroles,dc=test,dc=com"
+		group-search-filter="(roleOccupant={0})"
+       		role-prefix="ROLE_" />
+    </authentication-manager>
+</beans:beans>

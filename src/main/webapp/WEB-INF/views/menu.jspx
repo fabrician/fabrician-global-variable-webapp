@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_componentvariable" z="8n3cAaAJc6UJy2HMOcaVyDOJaO4=">
+            <menu:item id="i_componentvariable_new" messageCode="global_menu_new" url="/componentvariables?form" z="LkGnFrN0xb0tnDyWz8nbXHpPwGc="/>
+            <menu:item id="i_componentvariable_list" messageCode="global_menu_list" url="/componentvariables?page=1&amp;size=${empty param.size ? 10 : param.size}" z="uti4Z2oxAbM8HPzvZlmmgT4ddZk="/>
+        </menu:category>
+        <menu:category id="c_archivevariable" z="nwN+d8NWk4m0wVdGFxjipD7d26s=">
+            <menu:item id="i_archivevariable_new" messageCode="global_menu_new" url="/archivevariables?form" z="JAJiaEOnJrTDKbusPHl46zs4Bb8="/>
+            <menu:item id="i_archivevariable_list" messageCode="global_menu_list" url="/archivevariables?page=1&amp;size=${empty param.size ? 10 : param.size}" z="SWZ37PC3ies/epB6n9T3Tp/Lq1M="/>
+        </menu:category>
+    </menu:menu>
+</div>

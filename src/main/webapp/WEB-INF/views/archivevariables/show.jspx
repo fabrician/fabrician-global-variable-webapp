@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_fabrician_webapp_globalvar_domain_ArchiveVariable" object="${archivevariable}" path="/archivevariables" z="user-managed">
+        <field:display field="gvName" id="s_org_fabrician_webapp_globalvar_domain_ArchiveVariable_gvName" object="${archivevariable}" z="user-managed"/>
+        <field:display field="gvValue" id="s_org_fabrician_webapp_globalvar_domain_ArchiveVariable_gvValue" object="${archivevariable}" z="user-managed"/>
+        <field:display field="archiveName" id="s_org_fabrician_webapp_globalvar_domain_ArchiveVariable_archiveName" object="${archivevariable}" z="user-managed"/>
+        <field:display field="archiveId" id="s_org_fabrician_webapp_globalvar_domain_ArchiveVariable_archiveId" object="${archivevariable}" z="user-managed"/>
+        <field:display field="archiveGroupId" id="s_org_fabrician_webapp_globalvar_domain_ArchiveVariable_archiveGroupId" object="${archivevariable}" z="user-managed"/>
+        <field:display field="archiveVersion" id="s_org_fabrician_webapp_globalvar_domain_ArchiveVariable_archiveVersion" object="${archivevariable}" z="user-managed"/>
+        <field:display field="project" id="s_org_fabrician_webapp_globalvar_domain_ArchiveVariable_project" object="${archivevariable}" z="user-managed"/>
+        <field:display field="environment" id="s_org_fabrician_webapp_globalvar_domain_ArchiveVariable_environment" object="${archivevariable}" z="user-managed"/>
+        <field:display field="location" id="s_org_fabrician_webapp_globalvar_domain_ArchiveVariable_location" object="${archivevariable}" z="user-managed"/>
+        <field:display field="logicalMachine" id="s_org_fabrician_webapp_globalvar_domain_ArchiveVariable_logicalMachine" object="${archivevariable}" z="user-managed"/>
+    </page:show>
+</div>
