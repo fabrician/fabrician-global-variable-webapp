@@ -21,7 +21,7 @@ If needed, the database tables are automatically created by this application.
 
 ### Configure Security LDAP
 ----------------------------------------
-To secure the application, you must configure LDAP settings in [`src/main/resources/META-INF/spring/applicationContext-security.xml`](src/main/resources/META-INF/spring/applicationContext-security.xm`)
+To secure the application, you must configure LDAP settings in [`src/main/resources/META-INF/spring/applicationContext-security.xml`](src/main/resources/META-INF/spring/applicationContext-security.xml`)
 
 ### Building Application
 ------------------------------
